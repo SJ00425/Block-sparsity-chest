@@ -1,0 +1,3 @@
+# Ignore experiment data files
+cir_data.mat
+cir_data.npz
