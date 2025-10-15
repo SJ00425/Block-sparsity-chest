@@ -4,9 +4,11 @@ In sionna:
 
 orientation=[yaw, pitch, roll], rads
 
-Yaw 垂直轴（Z 轴）绕 Z 轴旋转
-Pitch 横轴（Y 轴）绕 Y 轴旋转
-Roll 纵轴（X 轴）绕 X 轴旋转
+Yaw — rotation around the vertical (Z) axis
+
+Pitch — rotation around the lateral (Y) axis
+
+Roll — rotation around the longitudinal (X) axis
 
 ue_rows = 1
 ue_cols = 8
