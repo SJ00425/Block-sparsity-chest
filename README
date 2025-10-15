@@ -22,12 +22,6 @@ Data are saved in both **`.npz`** and **`.mat`** formats.
 
 
 
-
-
-
-
-
-
 - **TX (UE)**: 2×2 planar array → 4 antennas  
 - **RX (BS)**: 8×8 planar array → 64 antennas  
 - **UE orientation**: `[yaw, pitch, roll] = [0, 0, 0]` → vertically aligned  
