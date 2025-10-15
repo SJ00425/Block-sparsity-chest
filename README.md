@@ -1,3 +1,5 @@
+h_freq ([batch size, num_rx, num_rx_ant, num_tx, num_tx_ant, num_time_steps, fft_size], tf.complex)
+
 In sionna:
 
 orientation=[yaw, pitch, roll], rads
@@ -9,3 +11,4 @@ Roll 纵轴（X 轴）绕 X 轴旋转
 ue_rows = 1
 ue_cols = 8
 orientation=[0,0,0] vertically
+
