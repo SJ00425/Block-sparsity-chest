@@ -1,4 +1,8 @@
 h_freq ([batch size, num_rx, num_rx_ant, num_tx, num_tx_ant, num_time_steps, fft_size], tf.complex)
+h_freq is non-normalized  – If normalized, the channel is normalized over the resource grid
+
+
+In cir file, we have cir "a" and non-normalized delay "tau" (arrive time of first path isn't 0)
 
 1 TX: 2*2 4 antennas
 1 RX: 8*8 64 antennas
