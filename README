@@ -1,0 +1,45 @@
+h_freq ([batch size, num_rx, num_rx_ant, num_tx, num_tx_ant, num_time_steps, fft_size], tf.complex) h_freq is non-normalized – If normalized, the channel is normalized over the resource grid
+
+a ([batch size, num_rx, num_rx_ant, num_tx, num_tx_ant, num_paths, num_time_steps]) tau [num_rx, num_rx_ant, num_tx, num_tx_ant, num_paths]
+
+In cir file, we have cir "a" and non-normalized delay "tau" (arrive time of first path isn't 0)
+
+
+
+# Channel Data (Sionna RT)
+
+This folder contains channel data exported from **Sionna RT**, including:
+
+- **`a`**, `tau`: time-domain CIR  
+- **`h_freq`**: frequency-domain channel response  
+
+Data are saved in both **`.npz`** and **`.mat`** formats.
+
+---
+
+## Variables
+
+| Name | Shape | Type | Note |
+|------|--------|------|------|
+| `h_freq` | [batch, rx, rx_ant, tx, tx_ant, time_steps, fft_size] | complex | Frequency-domain response (non-normalized). | If normalized, the channel is normalized over the resource grid
+| `a` | [batch, rx, rx_ant, tx, tx_ant, paths, time_steps] | complex | Time-domain CIR. |
+| `tau` | [rx, rx_ant, tx, tx_ant, paths] | float (s) | (non-normalized) arrive time of first path isn't 0. |
+
+
+
+
+
+
+
+
+
+
+- **TX (UE)**: 2×2 planar array → 4 antennas  
+- **RX (BS)**: 8×8 planar array → 64 antennas  
+- **UE orientation**: `[yaw, pitch, roll] = [0, 0, 0]` → vertically aligned  
+- **Angle conventions (radians)**:
+  - **Yaw** — rotation around **Z** (vertical) axis  
+  - **Pitch** — rotation around **Y** (lateral) axis  
+  - **Roll** — rotation around **X** (longitudinal) axis  
+
+ue_rows = 1 ue_cols = 8 orientation=[0,0,0] vertically
